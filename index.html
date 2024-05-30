@@ -20,15 +20,18 @@
                 age: 20
             }
 
-            handleClick(e){
+            handleClick = (e) => {
+                this.setState({
+                    name: 'Tung dz vcl'
+                });
                 console.log("click one", e.target);
             }
 
-            handleMouseOver(e){
+            handleMouseOver = (e) => {
                 console.log("hover one", e.target);
             }
 
-            handleCopy(e) {
+            handleCopy = (e) => {
                 console.log("Copy the text");
             }
 
