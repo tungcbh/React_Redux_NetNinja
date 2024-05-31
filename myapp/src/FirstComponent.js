@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FirstComponent = ({ Data }) => {
+const FirstComponent = ({ datas }) => {
     // const List = Data.map(item => {
     //     if (item.age >= 20) {
     //         return (
@@ -13,12 +13,12 @@ const FirstComponent = ({ Data }) => {
     //     }
     // })
 
-    const List = Data.map(item => {
-        return (item.age >= 20) ? (
-            <div className="tung" key={item.id}>
-                <div>Name: {item.name}</div>
-                <div>Age:{item.age}</div>
-                <div>University: {item.uni}</div>
+    const List = datas.map(data => {
+        return (data.age >= 20) ? (
+            <div className="tung" key={data.id}>
+                <div>Name: {data.name}</div>
+                <div>Age:{data.age}</div>
+                <div>University: {data.uni}</div>
             </div>
         ) : null;
     })
