@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FirstComponent from './FirstComponent';
+import ShowData from './ShowData.js';
 import AddData from './AddData.js';
 
 class App extends Component {
@@ -14,12 +14,19 @@ class App extends Component {
 
   addData = (data) => {
     data.id = this.state.datas.length + 1;
-
-    // console.log(data);
     let datas = [...this.state.datas, data];
-    console.log(datas);
     this.setState({
       datas: datas,
+    })
+  }
+
+  deleteData = (id) => {
+    // console.log(id);
+    let datas = this.state.datas.filter((data) => {
+      return data.id !== id;
+    })
+    this.setState({
+      datas: datas
     })
   }
 
@@ -28,7 +35,7 @@ class App extends Component {
       <div className="app-container">
         <h1>My second React app</h1>
         <p>Welcome to my page</p>
-        <FirstComponent datas={this.state.datas} />
+        <ShowData datas={this.state.datas} deleteData={this.deleteData} />
         <AddData addData={this.addData} />
       </div>
     );
