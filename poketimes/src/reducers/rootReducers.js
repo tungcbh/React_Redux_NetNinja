@@ -1,13 +1,13 @@
-
-
 const initState = {
     posts: [
-        {id: '1', title:'aaaa', body :'love you'},
-        {id: '2', title:'bbbb', body :'love you so much'},
-        {id: '3', title:'cccc', body :'love you'},
+        { id: '1', title: 'aaaa', body: 'love you' },
+        { id: '2', title: 'bbbb', body: 'love you so much' },
+        { id: '3', title: 'cccc', body: 'love you' },
     ]
 }
 
-const rootReducer = (state, action) => {
+const rootReducer = (state = initState, action) => {
     return state;
 }
+
+export default rootReducer;
